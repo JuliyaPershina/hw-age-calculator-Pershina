@@ -1,0 +1,188 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --lightRed: hsl(0, 100%, 67%);
+  --white: #ffffff;
+  /* --offWhite: #f0f0f0; */
+  /* --lightGrey: #dbdbdb; */
+  --lightGrey: #f0f0f0;
+  --line: #dcdcdc;
+  --Grey: #716f6f;
+  /* --offBlack: #141414; */
+  --black: #151515;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  width: 100%;
+  background: var(--lightGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.age-calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 56px;
+  width: 840px;
+  min-height: calc(100vh - 40px);
+  max-height: 651px;
+  background: var(--white);
+  border-radius: 24px 24px 200px 24px;
+}
+.age-calculator__form {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  border-bottom: 1px solid var(--line);
+  padding-block-end: 48px;
+  position: relative;
+
+  .form-element {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--Grey);
+      margin-block-end: 8px;
+    }
+    input {
+      width: 160px;
+      height: 72px;
+      align-items: center;
+      padding: 12px 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    /* Chrome, Safari, Edge Chromium */
+    input::placeholder {
+      color: var(--black);
+      opacity: 0.5;
+    }
+
+    /* Firefox */
+    input::-moz-placeholder {
+      color: var(--black);
+      opacity: 0.5;
+    }
+
+    /* Internet Explorer 10–11 */
+    input:-ms-input-placeholder {
+      color: var(--black);
+      opacity: 0.5;
+    }
+
+    /* Microsoft Edge Legacy */
+    input::-ms-input-placeholder {
+      color: var(--black);
+      opacity: 0.5;
+    }
+
+    /* Старі WebKit (опціонально) */
+    input::-webkit-input-placeholder {
+      color: var(--black);
+      opacity: 0.5;
+    }
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      cursor: pointer;
+    }
+    input[type='number'] {
+      appearance: textfield; /* новий стандарт */
+      -moz-appearance: textfield; /* для Firefox */
+      cursor: pointer;
+    }
+
+    input::-ms-clear,
+    input::-ms-reveal {
+      display: none;
+      cursor: pointer;
+    }
+  }
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(50%);
+    width: 96px;
+    height: 96px;
+    background: var(--purple);
+    border-radius: 50%;
+    border: none;
+    background-image: url(./assets/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.age-calculator__result {
+  padding-block-start: 48px;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 104px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  span {
+    color: var(--purple);
+  }
+}
+.result-year {
+}
+.result-month {
+}
+.result-days {
+}

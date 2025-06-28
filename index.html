@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age calculator app</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <article class="age-calculator">
+      <form class="age-calculator__form">
+        <div class="form-element">
+          <label for="input-day">Day</label>
+          <input
+            type="number"
+            name="input-day"
+            id="input-day"
+            placeholder="DD"
+            min="1"
+            max="31"
+            required
+          />
+        </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+        <div class="form-element">
+          <label for="input-month">Month</label>
+          <input
+            type="number"
+            name="input-month"
+            id="input-month"
+            placeholder="MM"
+            min="1"
+            max="12"
+            required
+          />
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <div class="form-element">
+          <label for="input-year">Year</label>
+          <input
+            type="number"
+            name="input-year"
+            id="input-year"
+            placeholder="YYYY"
+            min="1900"
+            max="2025"
+            required
+          />
+        </div>
 
-  Day
-  DD
+        <button type="submit"></button>
+      </form>
 
-  Month
-  MM
+      <div class="age-calculator__result">
+        <p><span class="result-year">--</span> years</p>
+        <p><span class="result-month">--</span> months</p>
+        <p><span class="result-days">--</span> days</p>
+      </div>
+    </article>
 
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
