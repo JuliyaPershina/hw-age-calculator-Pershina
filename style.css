@@ -1,13 +1,10 @@
 :root {
   --purple: hsl(259, 100%, 65%);
-  --lightRed: hsl(0, 100%, 67%);
+  --lightRed: #ff5959;
   --white: #ffffff;
-  /* --offWhite: #f0f0f0; */
-  /* --lightGrey: #dbdbdb; */
   --lightGrey: #f0f0f0;
   --line: #dcdcdc;
   --Grey: #716f6f;
-  /* --offBlack: #141414; */
   --black: #151515;
 }
 
@@ -74,7 +71,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 56px;
-  width: 840px;
+  max-width: 840px;
+  width: 100%;
   min-height: calc(100vh - 40px);
   max-height: 651px;
   background: var(--white);
@@ -100,7 +98,8 @@ body {
       margin-block-end: 8px;
     }
     input {
-      width: 160px;
+      max-width: 160px;
+      width: 100%;
       height: 72px;
       align-items: center;
       padding: 12px 24px;
@@ -155,24 +154,24 @@ body {
     }
   }
   .form-element.error label {
-    color: #ff5959;
+    color: var(--lightRed);
   }
-  
+
   .form-element.error input {
-    border: 1px solid #ff5959;
+    border: 1px solid var(--lightRed);
   }
-  
+
   .form-element.error .error-text {
-    color: #ff5959;
+    color: var(--lightRed);
     visibility: visible;
   }
-  
+
   .form-element .error-text {
-    visibility: hidden; /* приховано, поки немає помилки */
+    visibility: hidden;
     font-style: italic;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 21px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   button {
@@ -205,9 +204,65 @@ body {
     color: var(--purple);
   }
 }
-.result-year {
+
+@media (max-width: 710px) or (max-height: 670px) {
+  body {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    padding: 16px;
+  }
+  .age-calculator {
+    padding: 48px 24px;
+    max-height: 486px;
+    max-width: 540px;
+    border-radius: 24px 24px 100px 24px;
+  }
+  .age-calculator__form {
+    gap: 16px;
+    padding-block-end: 64px;
+    & .form-element {
+      label {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      input {
+        height: 54px;
+        padding: 12px 16px;
+      }
+    }
+    button {
+      width: 64px;
+      height: 64px;
+      right: 50%;
+      transform: translateX(50%) translateY(50%);
+      background-size: 24px;
+    }
+  }
+  .age-calculator__result {
+    font-size: 56px;
+    padding-block-start: 64px;
+  }
 }
-.result-month {
-}
-.result-days {
+
+@media (max-width: 380px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .age-calculator {
+    padding: 48px 20px;
+  }
+  .age-calculator__form {
+    gap: 16px;
+
+    & .form-element {
+      input {
+        padding: 10px 12px;
+      }
+    }
+  }
+  .age-calculator__result {
+    font-size: 46px;
+  }
 }
