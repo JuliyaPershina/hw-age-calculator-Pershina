@@ -1,5 +1,5 @@
 :root {
-  --purple: hsl(259, 100%, 65%);
+  --purple: #854dff;
   --lightRed: #ff5959;
   --white: #ffffff;
   --lightGrey: #f0f0f0;
@@ -105,6 +105,10 @@ body {
       padding: 12px 24px;
       border: 1px solid var(--line);
       border-radius: 8px;
+    }
+    input:focus {
+        border: 1px solid var(--purple);
+        outline: none; 
     }
     /* Chrome, Safari, Edge Chromium */
     input::placeholder {
