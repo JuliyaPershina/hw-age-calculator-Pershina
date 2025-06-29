@@ -17,10 +17,9 @@
             name="input-day"
             id="input-day"
             placeholder="DD"
-            min="1"
-            max="31"
-            required
+
           />
+          <p class="error-text">Must be a valid day</p>
         </div>
 
         <div class="form-element">
@@ -30,10 +29,9 @@
             name="input-month"
             id="input-month"
             placeholder="MM"
-            min="1"
-            max="12"
-            required
+
           />
+          <p class="error-text">Must be a valid month</p>
         </div>
 
         <div class="form-element">
@@ -43,10 +41,10 @@
             name="input-year"
             id="input-year"
             placeholder="YYYY"
-            min="1900"
-            max="2025"
-            required
+            max="3000"
+
           />
+          <p class="error-text">Must be in the past</p>
         </div>
 
         <button type="submit"></button>

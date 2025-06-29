@@ -154,6 +154,27 @@ body {
       cursor: pointer;
     }
   }
+  .form-element.error label {
+    color: #ff5959;
+  }
+  
+  .form-element.error input {
+    border: 1px solid #ff5959;
+  }
+  
+  .form-element.error .error-text {
+    color: #ff5959;
+    visibility: visible;
+  }
+  
+  .form-element .error-text {
+    visibility: hidden; /* приховано, поки немає помилки */
+    font-style: italic;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+  }
+
   button {
     position: absolute;
     bottom: 0;
@@ -167,6 +188,10 @@ body {
     background-image: url(./assets/images/icon-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 0.5s ease-in-out;
+  }
+  button:hover {
+    background-color: var(--black);
   }
 }
 .age-calculator__result {
